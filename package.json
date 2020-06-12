@@ -4,7 +4,7 @@
   "description": "My package for trying to make an online word game for my friends and family.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Samuel Dupret",
   "license": "MIT",
