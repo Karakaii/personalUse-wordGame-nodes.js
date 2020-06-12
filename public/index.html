@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8"/>
+		<title>Word Game</title>
+	</head>
+
+    <body>
+		<p>Create/join a new room</p>
+		<form class="" id="createForm" action="gameRoom.html">
+			Username: &emsp;<input type="text" id="createUsername" name="username" value="" autocomplete="off"><br>
+			Room id: &emsp;<input type="text" id="createRoomId" name="roomId" value="" autocomplete="off"><br>
+			<!--Room password: &emsp;<input type="text" id="createRoomPwd" name="roomPwd" value=""><br>-->
+			<button type="button" id="createButton" onclick="createRoom();">Create/join</button>
+		</form>
+		<!--
+		<br><br>
+		<p>Join an existing room</p>
+		<form class="" id="joinForm" action="gameRoom.html">
+			Username: &emsp;<input type="text" id="joinUsername" value=""><br>
+			Room id: &emsp;<input type="text" id="joinRoomId" value=""><br>
+			Room password: &emsp;<input type="text" id="joinRoomPwd" value=""><br>
+			<button type="button" id="joinButton" onclick="joinRoom();">Join</button>
+		</form>
+		-->
+
+        <script src="js/roomMenu.js"> </script>
+    </body>
+</html>

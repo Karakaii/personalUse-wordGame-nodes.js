@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8"/>
+		<title>Word Game</title>
+
+		<!-- link to css stylesheet -->
+		<link type="text/css" rel="stylesheet" href="/css/style.css">
+		<!-- link to jQuery -->
+		<script src="js/jquery-3.5.1.min.js"></script>
+	</head>
+
+    <body>
+		<div id="infoBanner">
+			Best not to refresh, especially if you are a teller.
+		</div>
+		<br>
+
+		<div id="playerList">
+			PlayerList
+		</div>
+		<br>
+
+		<div id="score">
+			<span>Score: </span>
+			<span id="scoreNb">0</span>
+		</div>
+		<br>
+
+		<div id="timer">
+			Timer
+		</div>
+		<br>
+
+		<canvas id="canvas" width="800" height="250"></canvas>
+		<br><br>
+
+		<div id="wordTeller">
+			<h3 id="roleStatus">You are a GUESSER</h3>
+
+			<button type="button" id="readyButton" class="hiddenUI" onclick="tellerReady();">Ready</button>
+
+			<div class="hiddenUI" id="tellerUI">
+				<p>Word list:</p>
+				<p id="wordList"></p>
+				<button type="button" id="correctButton" onclick="correct();">Correct</button>
+				&emsp; &emsp;
+				<button type="button" id="passButton" onclick="pass();">Pass</button>
+				<br>
+			</div>
+		</div>
+		<br> <br>
+
+		<div id="bottomMenu">
+			<p id="p-roomId"></p>
+			<p>For personal use, all rights reserved to owners of chronomot.</p>
+			<select id=languageDropdown onchange="languageChange(this);">
+				<option value="english">English</option>
+				<option value="francais">Francais</option>
+			</select>
+			&emsp;
+			<button type="button" id="newGameButton" onclick="newGame();">New Game</button>
+			<p></p>
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha256-ijqLssetA1NMNjZ+w1zaUafQQLm4IW5OoM8O+4tatME=" crossorigin="anonymous"></script>
+		<script src="/socket.io/socket.io.js"> </script>
+        <script src="js/userCode.js"> </script>
+    </body>
+</html>

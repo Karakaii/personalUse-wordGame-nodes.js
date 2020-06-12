@@ -1,0 +1,38 @@
+/*https://www.toptal.com/designers/subtlepatterns/blue-snow-pattern/*/
+html {
+	background-image: url("../ressources/blue-snow.png");
+}
+
+/*
+body {
+	width: 960px;
+	margin: 10px auto;
+}*/
+
+div, #canvas {
+    background-color: #fbffff;
+	border: ridge;
+	border-width: 2px;
+	border-color: #cef3f3; /*change to more blueish*/
+}
+
+div {
+	width: 800px;
+}
+
+#wordTeller {
+	height: 275px;
+}
+
+#tellerUI, #roleStatus {
+	text-align: center;
+	border: none;
+}
+
+.hiddenUI {
+	display: none;
+}
+
+#timer, #infoBanner, #score {
+	text-align: center;
+}
