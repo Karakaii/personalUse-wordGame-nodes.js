@@ -1,16 +1,19 @@
-var users = [];
+//Creating the user variable:
+const users = [];
 
-//add user info:
+//Add user info:
 function addUser(id, username, room){
     var user = {
-        id: id,
+        id: id, //this will be their socket.id
         username: username,
-        room: room,
+        room: room, //this will be the room name they are joigning
         tellerStatus: false,
         ready: false
     }
 
+    //push to users array
     users.push(user);
+    //return the user
     return user;
 }
 
@@ -37,28 +40,27 @@ function getRoomUsers(room){
     return users.filter(user => user.room === room);
 }
 
-//Change tellerStatus:
-
 //Reset teller status:
 function resetTellerStatus(room){
+    //Get all the users:
     var roomUsers = getRoomUsers(room);
-
+    //Go through each of them and make them not a teller but make them all ready:
     for (var i = 0; i < roomUsers.length; i++) {
         roomUsers[i].tellerStatus = false;
         roomUsers[i].ready = true;
     }
-
+    //Return the room users:
     return roomUsers
 }
 
 //Make teller:
 function makeTeller(user){
+    //Take that user and make them a teller but make them not ready:
     user.tellerStatus = true;
     user.ready = false;
 }
 
-
-
+//Export the module:
 module.exports = {
     addUser,
     getUser,

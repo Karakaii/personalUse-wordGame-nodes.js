@@ -1,38 +1,39 @@
-/*https://www.toptal.com/designers/subtlepatterns/blue-snow-pattern/*/
+/* Background pattern from Toptal Subtle Patterns: https://www.toptal.com/designers/subtlepatterns/blue-snow-pattern/ */
 html {
 	background-image: url("../ressources/blue-snow.png");
 }
 
-/*
-body {
-	width: 960px;
-	margin: 10px auto;
-}*/
-
+/* This is for most elements: */
 div, #canvas {
-    background-color: #fbffff;
+    background-color: #fbffff; /* almost white background */
+	/* Make a small ridged border with a blueish grey color*/
 	border: ridge;
 	border-width: 2px;
-	border-color: #cef3f3; /*change to more blueish*/
+	border-color: #cef3f3;
 }
 
+/* Make the divs as wide as the canvas */
 div {
 	width: 800px;
 }
 
+/* Make the whole teller area this high */
 #wordTeller {
 	height: 275px;
 }
 
+/* Align the text and take away the border of the divs that are for the teller interface:*/
 #tellerUI, #roleStatus {
 	text-align: center;
 	border: none;
 }
 
+/* Everything with this class should start hidden */
 .hiddenUI {
 	display: none;
 }
 
+/* Align center the text of most elements */
 #timer, #infoBanner, #score {
 	text-align: center;
 }

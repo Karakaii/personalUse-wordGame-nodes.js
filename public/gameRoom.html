@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
         <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Word Game</title>
 
 		<!-- link to css stylesheet -->
@@ -35,14 +36,20 @@
 		<canvas id="canvas" width="800" height="250"></canvas>
 		<br><br>
 
+		<!-- This is the ui where the users that are tellers will see the buttons and the words -->
 		<div id="wordTeller">
+			<!-- Everyone will see their role status with this header -->
 			<h3 id="roleStatus">You are a GUESSER</h3>
 
+			<!-- Hidden button for the teller to say that they are ready -->
 			<button type="button" id="readyButton" class="hiddenUI" onclick="tellerReady();">Ready</button>
 
+			<!-- Interface for the teller with... -->
 			<div class="hiddenUI" id="tellerUI">
+				<!-- ...the word list -->
 				<p>Word list:</p>
 				<p id="wordList"></p>
+				<!-- ...buttons to signal that the guess was correct or to pass the words -->
 				<button type="button" id="correctButton" onclick="correct();">Correct</button>
 				&emsp; &emsp;
 				<button type="button" id="passButton" onclick="pass();">Pass</button>
@@ -51,21 +58,29 @@
 		</div>
 		<br> <br>
 
+		<!-- Menu at the bottom -->
 		<div id="bottomMenu">
+			<!-- Show room id -->
 			<p id="p-roomId"></p>
-			<p>For personal use, all rights reserved to owners of chronomot.</p>
+			<!-- Disclaimer -->
+			<p>For personal use only. All rights reserved to owners of chronomot.</p>
+			<!-- Dropdown to select language that signals when ever the language is changed -->
 			<select id=languageDropdown onchange="languageChange(this);">
 				<option value="english">English</option>
 				<option value="francais">Francais</option>
 			</select>
 			&emsp;
+			<!-- Button to start a new game -->
 			<button type="button" id="newGameButton" onclick="newGame();">New Game</button>
 			<p></p>
 		</div>
 
-		<!-- Scripts -->
+		<!-- ............................Scripts............................ -->
+		<!-- for qs -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha256-ijqLssetA1NMNjZ+w1zaUafQQLm4IW5OoM8O+4tatME=" crossorigin="anonymous"></script>
+		<!-- for socket.io, this is the page with the socket -->
 		<script src="/socket.io/socket.io.js"> </script>
+		<!-- for the user side js code -->
         <script src="js/userCode.js"> </script>
     </body>
 </html>
