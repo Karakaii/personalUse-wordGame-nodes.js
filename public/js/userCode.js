@@ -25,7 +25,6 @@ function widthCenter(childName, parentName){
 }
 
 //Center some element of the UI
-widthCenter("#roleStatus", "#wordTeller");
 widthCenter("#readyButton", "#wordTeller");
 //Reset the timer
 $("#timer").text("Timer");
