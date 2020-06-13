@@ -98,6 +98,8 @@ io.on('connection', function(socket){
         //Join this user to the room entered:
         socket.join(user.room);
 
+        //Get the room users:
+        var roomUsers = getRoomUsers(user.room);
         //Tell them the other users to update their playerList
         io.in(user.room).emit('updatePlayerList', roomUsers);
 
