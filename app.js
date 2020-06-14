@@ -22,13 +22,15 @@ var initialNbLetters = letters.length; //get how many cards there were to start 
 /* ---------Preparing elements for the game--------- */
 //Getting the text for the words:
 const fs = require('fs');
-var englishWords = fs.readFileSync('./public/ressources/english2.txt', 'utf8');
+//http://www.desiquintans.com/downloads/nounlist/nounlist.txt
+var englishWords = fs.readFileSync('./public/ressources/english_nouns.txt', 'utf8');
 englishWords = englishWords.split("\n"); //english words
-var frenchWords = fs.readFileSync('./public/ressources/francais.txt', 'utf8');
+//https://www.sketchengine.eu/french-word-list/#tab-id-2
+var frenchWords = fs.readFileSync('./public/ressources/french_nouns.txt', 'utf8');
 frenchWords = frenchWords.split("\n"); //french words
 var wordList; //preparing a variable to hold the word array
 const words = []; //preparing an array to hold the words presented to the teller
-const minLetterLength = 4; //words will have to be minimum this number of letters
+const minLetterLength = 2; //words will have to be minimum this number of letters
 
 //Prepare information for the tellers:
 //initial teller positions
